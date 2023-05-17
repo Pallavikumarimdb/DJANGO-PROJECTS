@@ -1,4 +1,6 @@
+import email
 from django.shortcuts import render, HttpResponse
+from datetime import datetime
 
 # Create your views here.
 
@@ -16,4 +18,11 @@ def projects(request):
     return render(request, 'projects.html')
 
 def contact(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        desc = request.POST.get('desc')
+        datetime.today()
+
     return render(request, 'contact.html')
