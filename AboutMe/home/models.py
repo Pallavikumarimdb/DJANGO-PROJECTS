@@ -8,3 +8,7 @@ class Contact(models.Model):
     phone = models.CharField(max_length=12)
     desc = models.TextField()
     date = models.DateField()
+
+    # To see the name of sender in database entry
+    def __str__(self):
+        return self.name
