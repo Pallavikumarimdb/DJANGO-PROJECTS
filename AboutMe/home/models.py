@@ -12,3 +12,12 @@ class Contact(models.Model):
     # To see the name of sender in database entry
     def __str__(self):
         return self.name
+
+
+class Article(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+
+    # To see the name of sender in database entry
+    def __str__(self):
+        return self.title
